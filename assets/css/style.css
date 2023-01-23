@@ -1,5 +1,64 @@
-/* */
+/* Begining of CSS document for ThomasCalleStackDeveloper - enjoy!*/
 
+html {
+    font-size: 62%;
+    scroll-behavior: smooth;
+}
+
+/* SOCIAL MEDIA SECTION "social-icons" */
+.social-icons-wrapper {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.social-icons-wrapper .icon {
+    position: relative;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icons-wrapper .icon:hover span{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Menu nav bar for about, resume and contact */
+.menu {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Portfolio headshot of Thomas Calle(me) or avatar */
+.avatar {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 60px;
+    align-items: center;
+
+}
+/* Body structure style */
 Body {
     font-family: Arial;
     margin: 0;
@@ -7,63 +66,46 @@ Body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
+
 }
-h1 {
-    color: rgba(117, 37, 237, 0.466);
+/* Photo backdrop on the header of the website page */
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(../image/steinar-engeland-UtEUUNHvMLs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
 }
-img,
-h1,
-body nav {
+
+/* Card body's will contain organized  */
+
+.card-body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-}
-img {
-    border-radius: 60px;
-}
-:root {
-    color: #33393f;
-    color: beige;
-    color: #e0eae4;
-    color: rgb(189, 144, 106);
-}
-/* set content highlight color and background */
-::selection {
-    background-color: beige;
-    color: #33393f;
+
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
-html {
-    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
+/* Body: font size family used throughout the CSS*/
 body {
-    /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
     font-size: 1.75rem;
     line-height: 1.5;
-    color: #e0eae4;
-    background-color: #ffffff;
+    color: gray;
+    background-color: white;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* H1 to H6 header design and frame perfect for mobile format*/
+h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.625rem;
     color: rgb(189, 144, 106);
     font-weight: 700;
@@ -72,55 +114,32 @@ h6 {
 }
 
 h1 {
-    /* 4rem = 40px (4 * 10px) */
-    font-size: 4rem;
+    font-size: 40px;
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 35px;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 2.5rem;
+    font-size: 25px;
 }
 
 h5 {
-    font-size: 2rem;
+    font-size: 20px;
 }
 
 h6 {
-    font-size: 1.5rem;
+    font-size: 10px;
 }
 
-p {
-    margin-bottom: 1rem;
-    color: #33393f;
-}
 
-blockquote {
-    margin: 0 0 1rem;
-    padding: 0.5rem 1rem;
-    border-left: 0.25rem solid #eae6e0;
-    border-right: 0.25rem solid #eae6e0;
-    color: #33393f;
-}
 
-code {
-    /* Monospace font stack is used for our code blocks to make it look more like code */
-    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
-        "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New",
-        Courier, monospace;
-}
-
-header h1.page-title {
-    padding: 1rem 1.2rem;
-    font-size: 4.5rem;
-}
-
+/* Resume container blocks - this is holding the blocks into the center of the page - otherwise the containers would be pushed out to the edge of the page */
 .container {
     width: 100%;
     max-width: 1320px;
@@ -132,7 +151,7 @@ header h1.page-title {
     text-align: center;
 }
 
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+/* Flexbox: Row */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -145,20 +164,16 @@ header h1.page-title {
     justify-content: center;
 }
 
-.my-image {
-    margin-bottom: 3rem;
-}
 
-/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+/* Mobile: formated card-column */
 .card-column {
     flex: 1 0 100%;
     padding: 1.5rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
     margin-bottom: 3rem;
 }
 
-/* make each code card a flexbox column to align and justify content within it */
+/* Code-card: currently where the photo iamges have been added */
 .code-card {
     display: flex;
     flex-direction: column;
@@ -166,58 +181,62 @@ header h1.page-title {
     min-height: 100%;
     padding: 2rem;
     color: rgb(189, 144, 106);
-
-    /* outline is like border, but on the outside of the box instead of inside */
     outline: 2px double #dbd4cb;
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
 }
 
+/* Code card header */
 .code-card .card-header {
-    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-    position: relative;
-    margin: -4rem 0 1.5rem 0;
-    padding: 0.5rem 1rem;
-    background-color: #33393f;
-    color: rgb(189, 144, 106);
     border: 2px solid #eae6e0;
     border-radius: 8px;
+    background-color: #33393f;
+    color: rgb(189, 144, 106);
     transition: all 0.5s ease-in-out;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
 }
 
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+/* Resume: card hover/glow effect turns on when mouse gloats */
 .code-card:hover,
 .code-card:hover .card-header {
     box-shadow: inset 0px 0px 8px rgb(189, 144, 106), 0 0 15px rgb(189, 144, 106);
 }
 
-/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
-.code-card .code-block {
-    flex-grow: 1;
+/* Resume: block image radius: */
+img {
+    border-radius: 60px;
 }
 
+/* Resume: code block flex */
+.code-card .code-block {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Resume: code card structure */
 .code-card pre {
-    /* set styles to make it so code wraps in <pre> instead of overflowing */
-    white-space: pre-wrap;
     overflow: auto;
+    white-space: pre-wrap;
+    border-radius: 60px;
     tab-size: 4;
     padding: 1.2rem 1rem;
-    border-radius: 8px;
-    /* use linear-gradient() function to create a fading background  */
     background-image: linear-gradient(rgba(205, 205, 205, 0.725) 0%, rgb(255, 255, 255) 100%);
     display: flex;
     align-items: center;
 }
 
-/* on <pre> click, select all contents so the code is highlighted */
+
 .code-card pre:active {
     user-select: all;
 }
 
-/* form styles */
+/* Contact: section of the css page where clients can enter their contact information */
 .form-wrapper {
     background-color: #f2f2f2;
     padding: 20px;
@@ -264,66 +283,33 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* SOCIAL MEDIA SECTION "social-icons" */
-.social-icons-wrapper {
-    margin-top: 5rem;
-    text-align: center;
+.contactinfo[class="contactinfo"]{
+    font-weight: 500;
+    font-size: large;
 }
 
-.social-icons-wrapper .icon {
-    position: relative;
-    background-color: #fbfbfb;
-    border-radius: 50%;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 22px;
-    display: inline-block;
-    align-items: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    color: #333;
-    text-decoration: none;
-}
-
-.social-icons-wrapper .icon:hover span{
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-
-}
-
-/* menu */
-.menu {
-    margin-top: 1.5rem;
-    text-align: center;
-}
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.menu ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+/* Mobile width settings */
 @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
+
     .card-column {
         flex: 0 0 50%;
     }
 
-    /* select the last child to grow to full width if it has space to grow */
-    .card-column:last-child {
-        flex-grow: 1;
-    }
 }
 
-/* media query for larger screens */
+/* Large screen monitor layout width settings */
 @media screen and (min-width: 992px) {
     .card-column {
         flex: 0 0 33%;
     }
 }
+
+/* Start: footer section styling */
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 4.5rem;
+}
+/* End: footer section styling*/
+/* End of this CSS file, thank you for viewing - Thomas Calle */
